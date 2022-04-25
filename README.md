@@ -3,8 +3,7 @@ Zhiyun Hu
 
 ## Research Project Overview
 
-How does Covid-19, measured by state-level and county-level total cases divided by the total population impacted average personal income 
-in 2020 in the United States? 
+How does Covid-19, measured by state-level and county-level total cases, impacted average personal income in 2020 in the United States? 
 The research will use both state-level and county-level daily Covid-19 cases data 
 (provided by New York Times public available dataset published on the GitHub) from January 21, 2020, 
 through December 31, 2020, in 3220 counties from all 50 
@@ -28,8 +27,11 @@ a state will lead to $-0.0099 decrease in a average personal income in a state. 
 will lead to $9.9 dollar decrease in a state. However, as the p-value indicates, Covid-19 is not a statistically signifiant variable in the regression,
 which reject my hypothesis that Covid-19 has a negative impact and is statistically significant in the regression model. 
 
-## How Findings is relevant to my Research Question
+## How findings is relevant to my Research Question
 
-
+My research question is the relationship on how Covid-19 impacts the personal income in each state/county, so running a regression model could help
+to directly see whether Covid-19 has a positive or negative impact on average personal income. Through analyzing the coefficient and the p-value in the
+regression, I can have a conclusion on whether to reject my hypothesis or not. Currently my initial findings are based on state-level data, I will continue
+to analyze on the county-level. 
 
 
