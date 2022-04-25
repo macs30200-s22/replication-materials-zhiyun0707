@@ -1,5 +1,23 @@
-# MACS 30200 Research Paper Initial Findings
+# MACS 30200: How did Covid-19 impact average personal income in the United States on the state-level and county-level? 
 Zhiyun Hu
+
+The code is written in Python 3.8.8 and all of its dependencies can be installed by running the following in the terminal (with the requirements.txt file included in this repository): 
+
+```
+pip install -r requirements.txt
+```
+
+## Step 1: Pre-process the data
+
+The data files that are used to conduct the regression analysis is stored in the file `regression data`.
+The Covid-19 cases data is named as `us-states.csv.`
+The income data is named as `income_state_clean.csv.`
+The control variables is named as `state_control_variable.`
+Import the `pre_processing_data & multivariate_regression.ipynb` pre-processing section to reproduce the analysis. 
+
+## Step 2: Run the regression
+
+Import the `regression_analysis.py` and use the dataset `regression_analysis.csv` to run the regression analysis.
 
 ## Research Project Overview
 
@@ -34,4 +52,15 @@ to directly see whether Covid-19 has a positive or negative impact on average pe
 regression, I can have a conclusion on whether to reject my hypothesis or not. Currently my initial findings are based on state-level data, I will continue
 to analyze on the county-level. 
 
+## Cite my project
 
+```
+@misc{Hu2022,
+  author = {Hu, Zhiyun.},
+  title = {Covid-19 impact on average personal income in the United States on a state-level and county-level},
+  year = {2022},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/macs30200-s22/replication-materials-zhiyun0707}}
+  }
+```
