@@ -1,6 +1,8 @@
 # MACS 30200: How did Covid-19 impact average personal income in the United States on the state-level and county-level? 
 Zhiyun Hu
 
+[![DOI](https://zenodo.org/badge/483485911.svg)](https://zenodo.org/badge/latestdoi/483485911)
+
 The code is written in Python 3.8.8 and all of its dependencies can be installed by running the following in the terminal (with the requirements.txt file included in this repository): 
 
 ```
