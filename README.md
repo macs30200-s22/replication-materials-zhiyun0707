@@ -45,10 +45,14 @@ Overall distribution of the variables, which demonstrates right-skewed distribut
 ###### state-level regression results
 <img width="969" alt="Screen Shot 2022-05-22 at 20 44 09" src="https://user-images.githubusercontent.com/89923088/169727948-33a7f941-12ce-490c-8959-cc993f2ea41a.png">
 
+From the table we can see that COVID-19 is not a statistically significant variable, that violates the initial assumption, while education, poverty, and non-white are three statistically significant variable. This may because of the data inaccuracy and because that state-level analysis does not tease out the differences compared to county-level analysis. 
+
 
 ###### county-level regression results
 
 <img width="883" alt="Screen Shot 2022-05-22 at 20 44 02" src="https://user-images.githubusercontent.com/89923088/169727953-239ea3bb-4e3e-4701-a935-75653627a737.png">
+
+From the table we can see that COVID-19 is a statistically significant variable, which is the same as the initial hypotheiss, while education, poverty, and non-white, white, and ethinicity are also statistically significant variables. 
 
 This study aims to explore the relationship between COVID-19 cases and the impact on average personal income in the United States. The results show that on both the state and the county level, COVID-19 has a negative impact on personal income, that more COVID-19 cases in a region will lead to lower average personal income. In the OLS regression model, COVID-19 case is not statistically significant at the state level while is statistically significant at the county level, which contradicts to the original hypothesis that COVID-19 is a statistically significant variable both on the state-level and county-level. This study also incorporated the government role and the policy into consideration. To analyze how the state government played a role in reducing the COVID-19 spread and solve the increasing unemployment and salary cut, the two dummy variables: one on whether the state released additional stimulus check or not, one on the state has lock down policy or not during 2020 demonstrates that effective government policy could reduce the pandemic negative impact on per capita income.
 
