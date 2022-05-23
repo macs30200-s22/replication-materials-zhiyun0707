@@ -9,48 +9,46 @@ pip install -r requirements.txt
 
 ## Step 1: Pre-process the data
 
+###### state-level analysis
 The data files that are used to conduct the regression analysis is stored in the file `regression data`.
-The Covid-19 cases data is named as `us-states.csv.`
-The income data is named as `income_state_clean.csv.`
-The control variables is named as `state_control_variable.`
-Import the `pre_processing_data & multivariate_regression.ipynb` pre-processing section to reproduce the analysis. 
+The state Covid-19 cases data is named as `us-states.csv.`
+The state income data is named as `income_state_clean.csv.`
+The state control variables is named as `state_control_variable.csv`
+Import the `state_level_regression_analysis.ipynb` section to reproduce the analysis. 
+
+###### county-level analysis
+The county level Covid-19 cases data is too large for upload, so please download the data from the following link: https://drive.google.com/file/d/1tX-JQJzQhEGoExx1wwarGyOTyOv3WgdR/view?usp=sharing
+
+The county income data is named as `income_with_county.csv.`
+The county control variables is named as `combine_data.csv`
+Import the `county_level_regression_analysis.ipynb` section to reproduce the analysis. 
+
 
 ## Step 2: Run the regression
 
-Import the `regression_analysis.py` and use the dataset `regression_analysis.csv` to run the regression analysis.
+Import the `regression_analysis.py` and use the dataset `regression_analysis.csv` to run the regression analysis for state-level.
+Similarly, change the dataset to `county_level_regression_analysis.csv` to run the regression analysis for county-level. 
 
 ## Research Project Overview
 
 How does Covid-19, measured by state-level and county-level total cases, impacted average personal income in 2020 in the United States? 
-The research will use both state-level and county-level daily Covid-19 cases data 
-(provided by New York Times public available dataset published on the GitHub) from January 21, 2020, 
-through December 31, 2020, in 3220 counties from all 50 
-states including Puerto Rico and the District of Columbia along 
-with the United States Census Bureau published dataset for 2020 county-level 
-population to calculate the proportion of people who have got Covid-19. 
-Average personal income in 2020 was extracted from the United States 
-Department of Commerce Bureau of Economic Analysis, Personal Income 
-by County, Metro, and Other Areas.
+Income is closely related to consumer spending, which constitutes a country's Gross Domestic Product (GDP), so understanding income and income inequality is important because it impacts a nation’s aggregate demand. Previous studies focused on demographic factors that affect income such as education, gender, marriage, race, and ethnicity. As COVID-19 pandemic broke out, the United States is one of the countries that had been affected significantly by the COVID-19, which accounted for over a quarter of the total cases around the globe. Even though researchers have analyzed the relationship between income and COVID-19, as most of them conducted the study in the initial stage of COVID-19 pandemic period, most of them used prediction modeling, few of them used official government data. The present study aims to explore the relationship between COVID-19 cases and the impact on average personal income in the United States through a cross-sectional regression model on the state-level and county-level in 2020, using dataset from United States Census for demographic factors and New York Times COVID-19 public shared GitHub dataset for COVID-19 cases. Through running regression with control variables of gender, race, ethnicity, education, and race, this study shows that on both the state and the county level, COVID-19 has a negative impact on personal income, that more COVID-19 cases in a region will lead to lower average personal income. In the OLS regression model, COVID-19 case is not statistically significant at the state level while is statistically significant at the county level. The government income support and lock down policy are effective as the dummy variable positive coefficient indicates. Due to data limitation, lack of the official data for the year 2021, this study does not address time-series or panel data analysis.
 
-## Initial Findings
-My initial findings focus on state-level mulivariate regression analysis, with income as my dependent variable, covid-19 cases in each state as my
-independent variable, with poverty (population below the state poverty level), education (population that have earned Bachelor's degree), gender
-(female population), white (white population), black (black population), ethnicity (Hispanic population), laborforce (labor force population) as 
-my control variables. 
+## Findings and Results
 
-<img width="727" alt="Screen Shot 2022-04-24 at 19 02 19" src="https://user-images.githubusercontent.com/89923088/165002433-d5140e34-f21a-43be-9575-0b2966c6283c.png">
+Overall distribution of the variables, which demonstrates right-skewed distribution: 
+<img width="974" alt="Screen Shot 2022-05-22 at 20 46 02" src="https://user-images.githubusercontent.com/89923088/169728121-883ea962-0e22-4157-8ef8-b3f5a822cf0c.png">
 
-As indicated by the OLS regression analysis, we can see that Covid-19 has a negative coefficient of -0.0099, which means that an additional case in 
-a state will lead to $-0.0099 decrease in a average personal income in a state. In other words, per 1,000 increase in Covid-19 cases 
-will lead to $9.9 dollar decrease in a state. However, as the p-value indicates, Covid-19 is not a statistically signifiant variable in the regression,
-which reject my hypothesis that Covid-19 has a negative impact and is statistically significant in the regression model. 
 
-## How findings is relevant to my Research Question
+###### state-level regression results
+<img width="969" alt="Screen Shot 2022-05-22 at 20 44 09" src="https://user-images.githubusercontent.com/89923088/169727948-33a7f941-12ce-490c-8959-cc993f2ea41a.png">
 
-My research question is the relationship on how Covid-19 impacts the personal income in each state/county, so running a regression model could help
-to directly see whether Covid-19 has a positive or negative impact on average personal income. Through analyzing the coefficient and the p-value in the
-regression, I can have a conclusion on whether to reject my hypothesis or not. Currently my initial findings are based on state-level data, I will continue
-to analyze on the county-level. 
+
+###### county-level regression results
+
+<img width="883" alt="Screen Shot 2022-05-22 at 20 44 02" src="https://user-images.githubusercontent.com/89923088/169727953-239ea3bb-4e3e-4701-a935-75653627a737.png">
+
+This study aims to explore the relationship between COVID-19 cases and the impact on average personal income in the United States. The results show that on both the state and the county level, COVID-19 has a negative impact on personal income, that more COVID-19 cases in a region will lead to lower average personal income. In the OLS regression model, COVID-19 case is not statistically significant at the state level while is statistically significant at the county level, which contradicts to the original hypothesis that COVID-19 is a statistically significant variable both on the state-level and county-level. This study also incorporated the government role and the policy into consideration. To analyze how the state government played a role in reducing the COVID-19 spread and solve the increasing unemployment and salary cut, the two dummy variables: one on whether the state released additional stimulus check or not, one on the state has lock down policy or not during 2020 demonstrates that effective government policy could reduce the pandemic negative impact on per capita income.
 
 ## Cite my project
 
