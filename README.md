@@ -31,18 +31,24 @@ Import the `county_level_regression_analysis.ipynb` section to reproduce the ana
 Import the `regression_analysis.py` and use the dataset `regression_analysis.csv` to run the regression analysis for state-level.
 Similarly, change the dataset to `county_level_regression_analysis.csv` to run the regression analysis for county-level. 
 
-## Research Project Overview
-
-How does Covid-19, measured by state-level and county-level total cases, impacted average personal income in 2020 in the United States? 
-The present study aims to explore the relationship between COVID-19 cases and the impact on average personal income in the United States through a cross-sectional regression model on the state-level and county-level in 2020, using dataset from United States Census for demographic factors and New York Times COVID-19 public shared GitHub dataset for COVID-19 cases. Through running regression with control variables of gender, race, ethnicity, education, and race, this study shows that on both the state and the county level, COVID-19 has a negative impact on personal income, that more COVID-19 cases in a region will lead to lower average personal income. In the OLS regression model, COVID-19 case is not statistically significant at the state level while is statistically significant at the county level. The government income support and lock down policy are effective as the dummy variable positive coefficient indicates. Due to data limitation, lack of the official data for the year 2021, this study does not address time-series or panel data analysis.
-
 ## Findings and Results
 
 Overall distribution of the variables, which demonstrates right-skewed distribution: 
 <img width="974" alt="Screen Shot 2022-05-22 at 20 46 02" src="https://user-images.githubusercontent.com/89923088/169728121-883ea962-0e22-4157-8ef8-b3f5a822cf0c.png">
 
 
-###### state-level regression results
+###### state-level correlation & regression results
+<img width="663" alt="Screen Shot 2022-06-03 at 18 33 35" src="https://user-images.githubusercontent.com/89923088/171966839-b5d79d39-8236-4af7-b4c8-992d931fc155.png">
+
+The Spearman Rank Correlation test demonstrates a negative correlation between the COVID-19 cases and income on the stat-level (correlation coefficient = -0.045, P = 0.751), representing that there is a negative correlation between COVID-19 cases and personal income, while the p-value indicates that the correlation relationship is not statistically significant.
+
+
+
+<img width="777" alt="Screen Shot 2022-06-03 at 18 33 43" src="https://user-images.githubusercontent.com/89923088/171966903-d4f12b3f-bd57-4c9a-8b8e-5cd41f1a2d81.png">
+
+The Spearman Rank correlation and corresponding p-value for COVID-19 cases and income on the state-level is -0.213 and 0.001, representing that there is a negative correlation between COVID-19 cases and personal income, while the p-value indicates that the correlation relationship is statistically significant.
+
+
 <img width="969" alt="Screen Shot 2022-05-22 at 20 44 09" src="https://user-images.githubusercontent.com/89923088/169727948-33a7f941-12ce-490c-8959-cc993f2ea41a.png">
 
 From the table we can see that COVID-19 is not a statistically significant variable, that violates the initial assumption, while education, poverty, and non-white are three statistically significant variable. This may because of the data inaccuracy and because that state-level analysis does not tease out the differences compared to county-level analysis. 
